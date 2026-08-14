@@ -189,6 +189,32 @@ footer { padding: 30px; background: #222; color: white; }
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 380px;
+        padding: 30px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card-back p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .btn-detalles,
+    .btn-wsp {
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+}
 
 
 
