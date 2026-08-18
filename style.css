@@ -216,6 +216,42 @@ footer { padding: 30px; background: #222; color: white; }
     }
 }
 
+/* AJUSTES PARA CELULAR */
+@media (max-width: 600px) {
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px 12px;
+    }
+
+    .card {
+        width: 100%;
+        min-height: 240px;
+        box-sizing: border-box;
+        padding: 25px 20px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card-back h3 {
+        font-size: 24px;
+    }
+
+    .card-back p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .btn-detalles,
+    .btn-volver {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
 
 
 
