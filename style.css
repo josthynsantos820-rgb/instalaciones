@@ -193,7 +193,87 @@ footer { padding: 30px; background: #222; color: white; }
     font-weight: 700;
 }
 
+header {
+    position: relative;
+}
 
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* ================================
+   GALERÍA DE TRABAJOS
+   ================================ */
+
+.galeria-trabajos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.trabajo {
+    overflow: visible;
+    border-radius: 12px;
+}
+
+.trabajo h3 {
+    margin: 0 0 15px;
+    font-size: 24px;
+}
+
+.galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.galeria-imagenes img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto cuando pasas el mouse */
+.galeria-imagenes img:hover {
+    transform: scale(1.03);
+}
+
+/* ================================
+   IMAGEN AMPLIADA
+   ================================ */
+
+.galeria-imagenes img.ampliada {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: auto;
+    height: auto;
+
+    max-width: 90vw;
+    max-height: 85vh;
+
+    transform: translate(-50%, -50%) !important;
+
+    object-fit: contain;
+
+    z-index: 9999;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
 
 
 
