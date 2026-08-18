@@ -91,12 +91,12 @@ footer { padding: 30px; background: #222; color: white; }
     border: none;
     cursor: pointer;
 
-    padding: 12px 24px;
+    padding: 15px 30px;
     margin-top: 15px;
 
     border-radius: 20px;
 
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 
     background: #f47b20;
@@ -124,7 +124,7 @@ footer { padding: 30px; background: #222; color: white; }
 
 .card-back p {
     margin: 8px 0;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 1.4;
 }
 
