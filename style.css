@@ -188,6 +188,11 @@ footer { padding: 30px; background: #222; color: white; }
     pointer-events: auto;
     cursor: pointer;
 }
+.card-front h3 {
+    font-size: 40px !important;
+    font-weight: 700;
+}
+
 
 
 
