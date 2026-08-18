@@ -1,262 +1,273 @@
-body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f9; color: #333; text-align: center; }
-header { background: #1a1a1a; color: #ffcc00; padding: 3rem 1rem; }
-.services { display: flex; flex-direction: column; justify-content:center;align-items: center; gap: 12px; padding: 20px; }
-.card { background: white; padding: 1.3rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 90%; }
-footer { padding: 30px; background: #222; color: white; }
-.btn-wsp { display: inline-block; background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 15px; }
-.btn-detalles {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 15px 30px;
-    background: #f47b20;
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 600;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Seguridad y Portones | Julio Morales</title>
+</head>
+<body>
+    <header>
+        <h1>Soluciones Profesionales En Seguridad</h1>
+        <h2>Técnico - Julio Morales</h2>
+        <p>Razor Ribbon • Cercas Eléctricas • Mallas Eléctricas • Instalacion y Mantenimiento De Portones • Cámaras de Seguridad</p>
+    </header>
 
-.btn-detalles:hover {
-    background: #ff963d;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(244, 123, 32, 0.3);
-}
-/* =================================
-   TARJETAS GIRATORIAS
-   ================================= */
+   <section class="services">
+    <!-- TARJETA 1 -->
+    <div class="card">
+        <input type="checkbox" id="card5">
 
-.card {
-    perspective: 1000px;
-    position: relative;
-}
+        <div class="card-inner">
 
-/* Ocultar checkbox */
-.card > input {
-    display: none;
-}
+            <div class="card-front">
+                <h3>Instalacion De Razor Ribbon</h3>
 
-.card-inner {
-    position: relative;
-    width: 100%;
-    min-height: 220px;
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
-}
+                <label for="card5" class="btn-detalles">
+                    Ver detalles
+                </label>
+            </div>
 
-/* Frente y atrás */
-.card-front,
-.card-back {
-    width: 100%;
-    min-height: 220px;
-    box-sizing: border-box;
-    backface-visibility: hidden;
-    border-radius: inherit;
-}
+            <div class="card-back">
+                <h3>Detalles</h3>
 
-/* Frente */
-.card-front {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Parte trasera */
-.card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotateY(180deg);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 25px;
-    text-align: center;
-}
-
-/* 🔄 HACER GIRAR LA TARJETA */
-.card > input:checked ~ .card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Botones */
-.btn-detalles,
-.btn-volver {
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-
-    padding: 12px 24px;
-    margin-top: 15px;
-
-    border-radius: 20px;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    background: #f47b20;
-    color: white;
-
-    text-decoration: none;
-}
-
-/* Efecto al pasar el dedo/mouse */
-.btn-detalles:hover,
-.btn-volver:hover {
-    transform: translateY(-2px);
-}
-.card-back {
-    overflow-y: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.card-back h3 {
-    margin: 5px 0 10px;
-    font-size: 28px;
-}
-
-.card-back p {
-    margin: 8px 0;
-    font-size: 13px;
-    line-height: 1.4;
-}
-
-.imagen-trabajo {
-    width: 150px;
-    height: 85px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 5px 0;
-}
-
-.btn-volver {
-    margin-top: 8px;
-    flex-shrink: 0;
-}
-.trabajos {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.trabajos h2 {
-    margin-bottom: 10px;
-}
-
-.trabajos-subtitulo {
-    margin-bottom: 30px;
-}
-
-.galeria-trabajos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.trabajo {
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.trabajo img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    border-radius: 12px;
-}
-
-.trabajo h3 {
-    margin-top: 12px;
-}
-.card-back {
-    position: absolute;
-    z-index: 6;
-}
-
-.btn-volver {
-    position: relative;
-    z-index: 20;
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-@media (max-width: 600px) {
-    body {
-        font-size: 18px;
-    }
-
-    .card {
-        width: 90%;
-        max-width: 380px;
-        padding: 30px;
-    }
-
-    .card h3 {
-        font-size: 22px;
-    }
-
-    .card-back p {
-        font-size: 17px;
-        line-height: 1.5;
-    }
-
-    .btn-detalles,
-    .btn-wsp {
-        font-size: 16px;
-        padding: 12px 22px;
-    }
-}
-
-/* MEJORAS PARA CELULAR */
-@media (max-width: 600px) {
-
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-        padding: 25px 10px;
-    }
-
-    .card {
-        width: 90% !important;
-        max-width: 400px;
-        min-height: 280px;
-        padding: 30px 20px;
-        font-size: 18px;
-    }
-
-    .card h3,
-    .card h2 {
-        font-size: 30px !important;
-    }
-
-    .card p {
-        font-size: 17px !important;
-        line-height: 1.5;
-    }
-
-    .btn-detalles,
-    .btn-volver {
-        font-size: 30px !important;
-        padding: 25px 50px; 
-        min-width: 250px ;
-    }
-}
+                <!-- ✏️ ESCRIBE AQUÍ LA INFORMACIÓN -->
+                <p>
+                   Sistema de seguridad perimetral diseñado para reforzar la protección de muros, cercas y áreas de acceso restringido.
+✓Mayor protección perimetral ✓Instalación profesional ✓Material resistente y duradero ✓Ideal para hogares, negocios y propiedades
 
 
 
+                </p>
+
+                <label for="card5" class="btn-volver">
+                    Volver
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TARJETA 2 -->
+    <div class="card">
+        <input type="checkbox" id="card1">
+
+        <div class="card-inner">
+
+            <div class="card-front">
+                <h3>Instalacion De Cercas Eléctricas</h3>
+
+                <label for="card1" class="btn-detalles">
+                    Ver detalles
+                </label>
+            </div>
+
+            <div class="card-back">
+                <h3>Detalles</h3>
+                
+
+                <!-- ✏️ ESCRIBE AQUÍ LA INFORMACIÓN -->
+                <p>
+Instalación profesional de cercas eléctricas para reforzar la seguridad de viviendas, comercios y propiedades.
+✓Instalación del sistema eléctrico
+ ✓Colocación de alambre y accesorios
+ ✓Revisión y puesta en funcionamiento
+ ✓Mantenimiento del sistema
+
+
+                </p>
+
+                <label for="card1" class="btn-volver">
+                    Volver
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TARJETA 3 -->
+    <div class="card">
+        <input type="checkbox" id="card2">
+
+        <div class="card-inner">
+
+            <div class="card-front">
+                <h3>Instalacion De Malla Electrica</h3>
+
+                <label for="card2" class="btn-detalles">
+                    Ver detalles
+                </label>
+            </div>
+
+            <div class="card-back">
+                <h3>Detalles</h3>
+
+                <!-- ✏️ ESCRIBE AQUÍ LA INFORMACIÓN -->
+                <p>
+                    Instalación de malla eléctrica como sistema de protección para diferentes tipos de propiedades, adaptada a las necesidades de cada cliente.
+✓Instalación y montaje
+ ✓Conexión del sistema eléctrico
+ ✓Revisión del funcionamiento
+ ✓Acabado profesional
+
+                </p>
+
+                <label for="card2" class="btn-volver">
+                    Volver
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TARJETA 4 -->
+    <div class="card">
+        <input type="checkbox" id="card3">
+
+        <div class="card-inner">
+
+            <div class="card-front">
+                <h3>Instalacion De Portones</h3>
+
+                <label for="card3" class="btn-detalles">
+                    Ver detalles
+                </label>
+            </div>
+
+            <div class="card-back">
+                <h3>Detalles</h3>
+
+                <!-- ✏️ ESCRIBE AQUÍ LA INFORMACIÓN -->
+                <p>
+                    Servicio de instalación de portones para brindar seguridad, funcionalidad y una buena presentación a tu propiedad.
+✓Instalación del portón
+ ✓Ajuste y nivelación
+ ✓Instalación de accesorios
+ ✓Prueba de funcionamiento
+
+                </p>
+
+                <label for="card3" class="btn-volver">
+                    Volver
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TARJETA 5 -->
+    <div class="card">
+        <input type="checkbox" id="card4">
+
+        <div class="card-inner">
+
+            <div class="card-front">
+                <h3>Mantenimiento De Portones</h3>
+
+                <label for="card4" class="btn-detalles">
+                    Ver detalles
+                </label>
+            </div>
+
+            <div class="card-back">
+                <h3>Detalles</h3>
+
+                <!-- ✏️ ESCRIBE AQUÍ LA INFORMACIÓN -->
+                <p>
+                    Mantenimiento preventivo y correctivo para conservar los portones en buenas condiciones y garantizar un funcionamiento adecuado.
+✓Revisión general
+ ✓Ajuste de componentes
+ ✓Lubricación
+ ✓Detección de fallas
+
+                </p>
+
+                <label for="card4" class="btn-volver">
+                    Volver
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+     <!-- TARJETA 6 -->
+    <div class="card">
+        <input type="checkbox" id="card6">
+
+        <div class="card-inner">
+
+            <div class="card-front">
+                <h3>Instalacion De Camaras De Seguridad</h3>
+
+                <label for="card6" class="btn-detalles">
+                    Ver detalles
+                </label>
+            </div>
+
+            <div class="card-back">
+                <h3>Detalles</h3>
+
+                <!-- ✏️ ESCRIBE AQUÍ LA INFORMACIÓN -->
+                <p>
+                   Instalación de sistemas de cámaras de seguridad para ayudarte a mantener vigilada tu propiedad y contar con mayor control.
+✓Instalación de cámaras
+ ✓Configuración del sistema
+ ✓Orientación de cámaras
+ ✓Prueba de funcionamiento
+
+                </p>
+
+                <label for="card6" class="btn-volver">
+                    Volver
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section class="trabajos">
+    <h2>Nuestros trabajos</h2>
+
+    <p class="trabajos-subtitulo">
+        Conoce algunos de los trabajos que hemos realizado.
+    </p>
+
+    <div class="galeria-trabajos">
+
+        <div class="trabajo">
+            <img src="imagenes/malla.jpg" alt="Trabajo de malla eléctrica">
+            <h3>Malla eléctrica</h3>
+        </div>
+
+        <div class="trabajo">
+            <img src="cercas-electricas-copia.jpg" alt="Trabajo de cerca eléctrica">
+            <h3>Cerca eléctrica</h3>
+        </div>
+
+        <div class="trabajo">
+            <img src="imagenes/porton.jpg" alt="Instalación de portón">
+            <h3>Instalación de portones </h3>
+        </div>
+
+        <div class="trabajo">
+            <img src="imagenes/camaras.jpg" alt="Instalación de cámaras">
+            <h3>Cámaras de seguridad </h3>
+        </div>
+
+    </div>
+</section>
 
 
 
 
+
+    <footer>
+        <p>Técnico Julio Morales</p>
+        <a href="https://wa.me/50244465697" class="btn-wsp" target="_blank">contáctanos por WhatsApp</a>
+    </footer>
+</body>
+</html>
 
