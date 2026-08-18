@@ -7,11 +7,11 @@ footer { padding: 30px; background: #222; color: white; }
 .btn-detalles {
     display: inline-block;
     margin-top: 15px;
-    padding: 8px 18px;
+    padding: 15px 30px;
     background: #f47b20;
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 22px;
     font-weight: 600;
     border-radius: 20px;
     transition: all 0.3s ease;
