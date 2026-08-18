@@ -6,10 +6,12 @@
 </head>
 <body>
     <header>
-        <h1>Soluciones Profesionales En Seguridad</h1>
-        <h2>Técnico - Julio Morales</h2>
-        <p>Razor Ribbon • Cercas Eléctricas • Mallas Eléctricas • Instalacion y Mantenimiento De Portones • Cámaras de Seguridad</p>
-    </header>
+    <img src="436DF829-3DF7-4BBF-9443-0B920080D969.png" alt="Logo" class="logo">
+
+    <h1>Soluciones Profesionales En Seguridad</h1>
+    <h2>Técnico - Julio Morales</h2>
+    <p>Razor Ribbon • Cercas Eléctricas • Mallas Eléctricas • Instalacion y Mantenimiento De Portones • Cámaras de Seguridad</p>
+</header>
 
    <section class="services">
     <!-- TARJETA 1 -->
@@ -237,24 +239,63 @@ Instalación profesional de cercas eléctricas para reforzar la seguridad de viv
 
     <div class="galeria-trabajos">
 
+        <!-- CÁMARAS -->
         <div class="trabajo">
-            <img src="imagenes/malla.jpg" alt="Trabajo de malla eléctrica">
+            <h3>Cámaras</h3>
+
+            <div class="galeria-imagenes">
+                <img src="imagenes/camaras1.jpg" alt="Instalación de cámaras 1" onclick="ampliarImagen(this)">
+                <img src="imagenes/camaras2.jpg" alt="Instalación de cámaras 2" onclick="ampliarImagen(this)">
+                <img src="imagenes/camaras3.jpg" alt="Instalación de cámaras 3" onclick="ampliarImagen(this)">
+            </div>
+        </div>
+
+
+        <!-- MALLA ELÉCTRICA -->
+        <div class="trabajo">
             <h3>Malla eléctrica</h3>
+
+            <div class="galeria-imagenes">
+                <img src="imagenes/malla1.jpg" alt="Malla eléctrica 1" onclick="ampliarImagen(this)">
+                <img src="imagenes/malla2.jpg" alt="Malla eléctrica 2" onclick="ampliarImagen(this)">
+                <img src="imagenes/malla3.jpg" alt="Malla eléctrica 3" onclick="ampliarImagen(this)">
+            </div>
         </div>
 
+
+        <!-- CERCA ELÉCTRICA -->
         <div class="trabajo">
-            <img src="cercas-electricas-copia.jpg" alt="Trabajo de cerca eléctrica">
             <h3>Cerca eléctrica</h3>
+
+            <div class="galeria-imagenes">
+                <img src="cercas-electricas-copia.jpg" alt="Cerca eléctrica 1" onclick="ampliarImagen(this)">
+                <img src="imagenes/cerca2.jpg" alt="Cerca eléctrica 2" onclick="ampliarImagen(this)">
+                <img src="imagenes/cerca3.jpg" alt="Cerca eléctrica 3" onclick="ampliarImagen(this)">
+            </div>
         </div>
 
+
+        <!-- PORTONES -->
         <div class="trabajo">
-            <img src="imagenes/porton.jpg" alt="Instalación de portón">
-            <h3>Instalación de portones </h3>
+            <h3>Instalación de portones</h3>
+
+            <div class="galeria-imagenes">
+                <img src="imagenes/porton1.jpg" alt="Portón 1" onclick="ampliarImagen(this)">
+                <img src="imagenes/porton2.jpg" alt="Portón 2" onclick="ampliarImagen(this)">
+                <img src="imagenes/porton3.jpg" alt="Portón 3" onclick="ampliarImagen(this)">
+            </div>
         </div>
 
+
+        <!-- MANTENIMIENTO -->
         <div class="trabajo">
-            <img src="imagenes/camaras.jpg" alt="Instalación de cámaras">
-            <h3>Cámaras de seguridad </h3>
+            <h3>Mantenimiento de portones</h3>
+
+            <div class="galeria-imagenes">
+                <img src="imagenes/mantenimiento1.jpg" alt="Mantenimiento 1" onclick="ampliarImagen(this)">
+                <img src="imagenes/mantenimiento2.jpg" alt="Mantenimiento 2" onclick="ampliarImagen(this)">
+                <img src="imagenes/mantenimiento3.jpg" alt="Mantenimiento 3" onclick="ampliarImagen(this)">
+            </div>
         </div>
 
     </div>
@@ -268,6 +309,13 @@ Instalación profesional de cercas eléctricas para reforzar la seguridad de viv
         <p>Técnico Julio Morales</p>
         <a href="https://wa.me/50244465697" class="btn-wsp" target="_blank">contáctanos por WhatsApp</a>
     </footer>
+<script>
+function ampliarImagen(imagen) {
+    imagen.classList.toggle("ampliada");
+}
+</script>
+
 </body>
 </html>
+
 
