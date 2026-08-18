@@ -247,8 +247,9 @@ footer { padding: 30px; background: #222; color: white; }
 
     .btn-detalles,
     .btn-volver {
-        font-size: 22px !important;
-        padding: 17px 35px;
+        font-size: 30px !important;
+        padding: 25px 50px; 
+        min-width: 250px ;
     }
 }
 
