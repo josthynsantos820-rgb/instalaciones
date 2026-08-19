@@ -305,6 +305,55 @@ header {
     position: relative;
     z-index: 100;
 }
+/* =================================
+   IMÁGENES AMPLIABLES
+   ================================= */
+
+.trabajo {
+    position: relative;
+}
+
+.trabajo input {
+    display: none;
+}
+
+.trabajo label {
+    display: block;
+    cursor: pointer;
+}
+
+.trabajo label img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+/* Imagen ampliada */
+.trabajo input:checked + label img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 90vh;
+    max-width: 1000px;
+    max-height: 90vh;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    border-radius: 10px;
+}
+
+/* Fondo oscuro */
+.trabajo input:checked + label::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
 
 
 
